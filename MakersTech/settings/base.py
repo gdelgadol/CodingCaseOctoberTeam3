@@ -143,3 +143,8 @@ REST_FRAMEWORK = {
 SPECTACULAR_SETTINGS = {
     "TITLE": "Makers Tech eCommerce",
 }
+
+CHATBOT = {
+    'model': 'llama3.2',
+    'context': 'extremly short responce'
+}
