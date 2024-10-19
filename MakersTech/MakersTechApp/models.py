@@ -9,16 +9,16 @@ class Brand(models.Model):
         return self.brand_name
 
 class Feature(models.Model):
-    feature_name = models.CharField(max_length=100)
+    feature = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.feature_name
+        return self.feature
 
 class Product(models.Model):
-    model_name = models.CharField(max_length=50)
+    model = models.CharField(max_length=50)
     model_brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
     model_features = models.ManyToManyField(Feature)
 
     def __str__(self):
-        return self.model_name
+        return self.model
 
