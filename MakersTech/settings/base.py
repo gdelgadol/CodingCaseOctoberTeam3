@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "drf_spectacular",
     #Internal apps
     'MakersTech.MakersTechApp',
+    'MakersTech.chat',
 ]
 
 MIDDLEWARE = [

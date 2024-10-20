@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 from MakersTech.MakersTechApp import views
+from MakersTech.chat.views import ChatBotAPIView
 
 router = DefaultRouter()
 router.register(r"brand", views.BrandViewSet)
@@ -26,5 +27,6 @@ router.register(r"product",views.ProductViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("api/", include(router.urls))
+    path("api/", include(router.urls)),
+    path("api/chat/", ChatBotAPIView.as_view(), name="chat_api"),
 ]

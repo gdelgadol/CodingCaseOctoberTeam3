@@ -42,10 +42,8 @@ def call_chat(prompt: str, tools=None):
             for tool_call in response['message']['tool_calls']:
                 function_name = tool_call['function']['name']
                 arguments = tool_call['function']['arguments']
-                
-                # Verificar si la función existe en el registro
+
                 if function_name in FUNCTIONS:
-                    # Llamar a la función y obtener el resultado
                     result = FUNCTIONS[function_name](**arguments)
                     return response, result
 
