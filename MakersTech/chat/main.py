@@ -38,8 +38,8 @@ def start_chat(prompt: str):
         )
         output_prompt = (
             f"Context: Your goal is to provide a friendly, concise, and informative response to the user query: "
-            f'"{prompt}". Use the following information to construct your response: '
-            f'{results if results else "Currently out of stock."} '
+            f'"{prompt}". function used: {response['message']} ,Use the following information to construct your response: '
+            f'{results if results else "results are empty or Currently out of stock."} '
             "Focus on engaging the user and guiding them effectively, as this is a tech store. Keep responses brief and direct."
             )
 
