@@ -52,6 +52,8 @@ Go to https://ollama.com/ and download the version of Ollama that suits your sys
 ## 5. PostgreSQL Scrip for DB
 
 These are values for testing out the ChatBot
+
+```
 -- Insert brands into the Brand table
 INSERT INTO public."MakersTechApp_brand" (brand_name) VALUES
 ('Dell'),
@@ -180,3 +182,4 @@ SELECT
     id
 FROM public."MakersTechApp_feature"
 WHERE feature IN ('Intel Core i3 1005G1', '8 GB RAM', '1 TB HDD', '$700');
+```
