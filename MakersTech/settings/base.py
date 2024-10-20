@@ -89,7 +89,7 @@ DATABASES = {
             "ENGINE": 'django.db.backends.postgresql',
             "NAME": 'MakersTechDB',
             "USER": 'postgres',
-            "PASSWORD": 'gdelgadol', #Esta vuelta toca que la cambie por lo que usted puso
+            "PASSWORD": os.environ.get("DB_PASSWORD"), #Esta vuelta toca que la cambie por lo que usted puso
             "HOST": 'localhost',
         }
 }
