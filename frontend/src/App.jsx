@@ -3,14 +3,14 @@ import { ProductPage } from './pages/ProductPage';
 import { ChatBotPage } from './pages/ChatBotPage';
 import { ProductCreationPage } from './pages/ProductCreation';
 import { Navigation } from './components/Navigation';
-import './App.css'; // Import the CSS styles
+import './App.css';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 
 function App() {
     return (
         <div className="app-container">
-            <header className="page-title">
-                    <h1>Makers Tech</h1>
-            </header>
+            <Header />
             <BrowserRouter>
                 <Navigation />
                 <div className="content-container">
@@ -22,6 +22,7 @@ function App() {
                     </Routes>
                 </div>
             </BrowserRouter>
+            <Footer />
         </div>
     );
 }
