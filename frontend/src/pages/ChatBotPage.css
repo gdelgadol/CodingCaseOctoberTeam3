@@ -1,0 +1,84 @@
+/* Main container for the chat */
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Chatbox styling */
+.chat-box {
+    padding: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    border-radius: 10px 10px 0 0;
+}
+
+/* User message styling */
+.user-message .message {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    text-align: right;
+}
+
+/* Bot message styling */
+.bot-message .message {
+    background-color: #e7f1ff;
+    color: #084298;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    text-align: left;
+}
+
+/* Styling the form at the bottom */
+.input-form {
+    display: flex;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 0 0 10px 10px;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Styling for the text input area */
+.input-textarea {
+    flex: 1;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 1rem;
+    outline: none;
+    resize: none;
+}
+
+/* Styling for the submit button */
+.submit-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Add smooth scrolling for the chat box */
+.chat-box {
+    scroll-behavior: smooth;
+}

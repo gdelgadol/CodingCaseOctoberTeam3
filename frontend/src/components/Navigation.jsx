@@ -1,13 +1,14 @@
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import './Navigation.css'; // Separate CSS file for the navigation
 
 export function Navigation() {
     return (
-        <div>
-            <Link to="/products">
-            <h1>Makers Tech</h1>
-            </Link>
-            <Link to="/products">View products</Link>
-            <Link to="/chat">ChatBot</Link>
-        </div>
-    )
+        <nav className="nav-bar">
+            <ul className="nav-links">
+                <li><Link to="/products">Products</Link></li>
+                <li><Link to="/chat">Chat</Link></li>
+            </ul>
+        </nav>
+    );
 }
+
