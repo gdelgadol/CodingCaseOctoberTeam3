@@ -1,5 +1,5 @@
 export function ChatBotPage(){
     return (
-        <div>Pene sexo</div>
+        <div>Chat Bot page</div>
     )
 }
