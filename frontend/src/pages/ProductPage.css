@@ -1,0 +1,72 @@
+/* Product Page styles */
+.product-page {
+    padding: 20px;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #f9f9f9; /* Slightly off-white for a softer look */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s;
+    color: #333; /* Change this to your desired text color */
+}
+
+/* Specific styles for headings and lists */
+.product-card h3 {
+    color: #007bff; /* Change this to your desired heading color */
+}
+
+.product-card ul {
+    color: #666; /* Change this to your desired list item color */
+}
+
+.product-card li {
+    padding: 5px 0; /* Optional: Adds spacing between list items */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-page {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .product-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Smaller cards on smaller screens */
+        gap: 15px; /* Reduce gap between cards */
+    }
+
+    .product-card {
+        padding: 10px; /* Reduce padding inside the card */
+    }
+
+    .product-card h3 {
+        font-size: 1.2rem; /* Smaller font size for headings */
+    }
+
+    .product-card ul {
+        font-size: 0.9rem; /* Smaller font size for lists */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        padding: 8px; /* Further reduce padding for very small screens */
+    }
+
+    .product-card h3 {
+        font-size: 1rem; /* Further reduce font size for headings */
+    }
+
+    .product-card ul {
+        font-size: 0.8rem; /* Further reduce font size for lists */
+    }
+}
+
