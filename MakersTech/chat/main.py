@@ -1,29 +1,7 @@
 import ollama
-from MakersTech.MakersTechApp import views
+from .funtions import FUNCTIONS_LIST, TOOLS
 
 MODEL = 'llama3.2'
-
-FUNCTIONS = {}
-
-TOOLS = [
-    {
-    'type': 'function',
-    'function': {
-        'name': '',
-        'description': '',
-        'parameters': {
-            'type': 'object',
-            'properties': {
-            'number': {
-                'type': '',
-                'description': '',
-                },
-            },
-            'required': [''],
-            },
-        },
-    },
-    ]
 
 def call_chat(prompt: str, tools=None):
     try:
@@ -42,9 +20,8 @@ def call_chat(prompt: str, tools=None):
             for tool_call in response['message']['tool_calls']:
                 function_name = tool_call['function']['name']
                 arguments = tool_call['function']['arguments']
-
-                if function_name in FUNCTIONS:
-                    result = FUNCTIONS[function_name](**arguments)
+                if function_name in FUNCTIONS_LIST:
+                    result = FUNCTIONS_LIST[function_name](**arguments)
                     return response, result
 
         return response, None
@@ -60,11 +37,12 @@ def start_chat(prompt: str):
             tools=TOOLS
         )
         output_prompt = (
-            f"Context: Your goal is to provide a friendly and informative response to the user query: "
+            f"Context: Your goal is to provide a friendly, concise, and informative response to the user query: "
             f'"{prompt}". Use the following information to construct your response: '
-            f'{results if results else "No result from function."} '
-            "Ensure the response is engaging and guides the user towards making a purchase decision. (short responce)"
+            f'{results if results else "Currently out of stock."} '
+            "Focus on engaging the user and guiding them effectively, as this is a tech store. Keep responses brief and direct."
             )
+
         return call_chat(prompt=output_prompt, tools=None)
 
     except Exception as e:
